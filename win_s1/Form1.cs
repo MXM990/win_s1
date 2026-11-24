@@ -39,6 +39,7 @@ namespace win_s1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            button2.Visible = true;
             textBox1.Text = label2.Text;
         }
 
@@ -50,6 +51,16 @@ namespace win_s1
         private void button6_Click(object sender, EventArgs e)
         {
             textBox3.UseSystemPasswordChar = !textBox3.UseSystemPasswordChar;
+        }
+
+        private void button7_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox3.UseSystemPasswordChar = false;
+        }
+
+        private void button7_KeyUp(object sender, KeyEventArgs e)
+        {
+            textBox3.UseSystemPasswordChar = true;
         }
     }
 }
